@@ -1,3 +1,2 @@
-print("hello world")
-print("a new world")
-print('\n')
+if __name__ == "__main__":
+    print("hello world!")
