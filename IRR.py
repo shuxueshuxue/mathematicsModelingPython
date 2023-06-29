@@ -1,5 +1,3 @@
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 ## 计算现金流的现值
 ## 假设投资者未来10年每年收到10000元的退休年金，期间贴现率为5%，请问这笔投资的现值为?
