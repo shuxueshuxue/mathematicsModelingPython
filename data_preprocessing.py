@@ -2,6 +2,59 @@ import numpy as np
 
 
 
+## *args形参的使用: 当传入多个位置参数，这多个位置参数会自动组成一个元组，然后就可以遍历这个元组中的参数
+# def fun(*args):
+#     print(type(args))
+#     print(args)
+#     for item in args:
+#         print(item)
+#
+# fun(2, 'alex', [3])
+
+
+
+
+## 在列表、元素、字典、集合和numpy的数组前加上星号 * 的含义: 将数据结构中元素都被分成一个一个的独立元素
+# List = ['a', 2, 3]
+# Tuple = ('b', 'c', 5)
+# Dict = {'name': 'Ada', 'age': 23}
+#
+# print(List)
+# print(Tuple)
+# print(Dict)
+#
+# print(*List)
+# print(*Tuple)
+# print(*Dict)
+
+# def print_item(*args):
+#     print(type(args))
+#     print(args)
+#     for item in args:
+#         print(item)
+#
+# List = ['apple', 23, 'orange', 9]
+# print_item(List) # list这个元组只有一个元素
+# print_item(*List) # 加上 * 之后， 直接把列表里面的元素取出来放到一个元组中， 然后直接遍历
+
+
+
+
+## **kwargs形参的使用: 当传入多个关键字参数，这多个位置参数会自动组成一个字典，然后就可以遍历这个字典中的参数
+# def fun(**kwargs):
+#     print(type(kwargs))
+#     print(kwargs)
+#     for key in kwargs.keys():
+#         print(key, kwargs[key])
+#
+# fun(name='Alvin', age=23, things=[1, 2, 'a'])
+
+
+
+
+
+
+
 # 1维列表切片
 # list_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(list_A[1:3]) # 切取第2个数据到第3个数据 ： 中括号左边是取到而右边是取不到，右边需要减去1， 所以切取的实际上就是左边号码加上1而右边对应号码不变
@@ -20,7 +73,7 @@ import numpy as np
 
 
 # 2维数组切片，2维列表无法切片
-# list_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # list_B = [11, 12, 13]
 # list1 = [list_A, list_B] # 将两个列表合并，不能用于2维切片, 输出2维列表
 # list2 =  [list(t) for t in zip(list_A,list_B)] # 2个1维列表合并成一个2维列表，每一个1维列表依次各取1个合成一个1维列表放入2维列表中， 不能用于2维切片，输出2维列表
@@ -32,7 +85,12 @@ import numpy as np
 # print(list5[0, :]) # 取二维数组中第0行的所有数据，即第0行数据， 输出1维数组
 # print(list5[:, 0:1]) # 取二维数组中第0列到1-1列数据， 输出2维数组
 
-
+## 另一个注意点
+# list_C = list_A
+# list_D = list_A[:]
+# list_A[0] = 10
+# print(list_C)
+# print(list_D)
 
 # 3维数组切片
 # x[n,::]、x[:,n:]、x[::,n]、x[:,:,n]
