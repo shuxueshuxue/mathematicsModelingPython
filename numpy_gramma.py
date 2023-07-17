@@ -171,7 +171,6 @@ array10 = np.arange(10)
 print(np.where(array10>5, 1, 0)) #where函数为条件函数，True返回1， False返回0
 
 
-# 集合关系
 # 包含关系：np.inld(array1, array2)
 # 交集关系 np.intersectld(array1, array2)
 # 并集关系 np.unionld(array1, array2)
@@ -191,4 +190,5 @@ print(np.linalg.inv(array11))
 print(np.linalg.inv(np.mat(array11))) # 矩阵求逆运算
 
 eig_value, eigvector = np.linalg.eig(array11) # linalg.eig函数可以同时求解特征值和特征向量
-print(eig_value, eigvector)
+print(eig_value)
+print(eigvector)
