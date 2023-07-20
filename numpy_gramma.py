@@ -18,7 +18,7 @@ import numpy as np
 
 array3 = np.array([1, 2, 3, 4, 5])
 array4 = np.array([1.1, 2.2, 3.3, 4.4, 5.3221])
-float_array3 = array3.astype(np.float64) # 数组的类型转换, dtype类型从int64变成float64
+float_array3 = array3.astype(np.float64) # 数组的类型转换, dtype类型从int64变成float64, astype不改变原本文件
 int_array4 = array4.astype(np.int32) #数组的类型转换, dtype类型从float64变成int32
 
 array5 = np.array([1, 2, np.nan, 4])
@@ -42,7 +42,7 @@ print(array7.reshape(1, 12)) # 数组的形状处理，输出2维数组
 
 #%% 1维列表切片
 list_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(list_A[1:3]) # 切取[1,2), 即第2个数据到第3个数据 ： 中括号左边是取到而右边是取不到，右边需要减去1， 所以切取的实际上就是左边号码加上1而右边对应号码不变
+print(list_A[1:3]) # 切取[1,3), 即第2个数据到第3个数据 ： 中括号左边是取到而右边是取不到，右边需要减去1， 所以切取的实际上就是左边号码加上1而右边对应号码不变
 print(list_A[-9:9]) # 切取[-9,8], 即倒数第9个数据到正数第9个数据 ： 对于负数不需要加上1
 print(list_A[1:]) # 省略表示没有中止， 所以切到最后一个数据
 print(list_A[:3]) # 省略表示从开头开始切
