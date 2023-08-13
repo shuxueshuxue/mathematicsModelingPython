@@ -370,10 +370,10 @@ import pandas as pd
 
 index = pd.DatetimeIndex(['2019-01-01', '2019-01-02', '2019-01-03', '2019-01-04'])
 dataframe21 = pd.DataFrame(np.arange(4), columns=['num'], index=index)
-# print(dataframe21)
+print(dataframe21)
 
 dataframe22 = pd.read_csv(r'data of data_preprocessing\\行业指数pe_ttm.CSV', engine='python', skiprows=1, encoding='gbk')
-# print(dataframe22)
+print(dataframe22)
 dataframe22['时间'] = dataframe22['时间'].astype('datetime64') # 将type从object变成datetime64
 dataframe22.set_index('时间', inplace=True)
 dataframe22.sort_index(inplace=True) # 按时间升序排列
