@@ -378,3 +378,32 @@ dataframe22['时间'] = dataframe22['时间'].astype('datetime64') # 将type从o
 dataframe22.set_index('时间', inplace=True)
 dataframe22.sort_index(inplace=True) # 按时间升序排列
 print(dataframe22['2018-01':'2019-01'])
+
+
+
+
+#%% DataFrame输出为csv\xlsx\txt文件
+import pandas as pd
+
+index = pd.DatetimeIndex(['2019-01-01', '2019-01-02', '2019-01-03', '2019-01-04'])
+dataframe23 = pd.DataFrame(np.arange(4), columns=['num'], index=index)
+print(dataframe23)
+
+outputpath1 ='pandas_gramma\\output1.csv'
+dataframe23.to_csv(outputpath1,sep=',',index=True,header=True)
+
+outputpath2 ='pandas_gramma\\output2.xlsx'
+dataframe23.to_excel(outputpath2,index=True,header=True)
+
+outputpath3 ='pandas_gramma\\output3.txt'
+dataframe23.to_csv(outputpath3,sep='\t',index=True,header=True)
+
+
+
+
+
+
+
+
+
+
